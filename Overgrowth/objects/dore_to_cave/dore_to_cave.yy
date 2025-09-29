@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"dore",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"Player","path":"objects/Player/Player.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"dore_to_cave",
+  "eventList":[],
   "managed":true,
-  "name":"dore",
+  "name":"dore_to_cave",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite3",
-    "path":"sprites/Sprite3/Sprite3.yy",
+    "name":"Sprite9",
+    "path":"sprites/Sprite9/Sprite9.yy",
   },
   "spriteMaskId":null,
   "visible":true,
