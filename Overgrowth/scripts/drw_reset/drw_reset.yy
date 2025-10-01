@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"drw_reset",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"drw_reset",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
