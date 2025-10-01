@@ -1,7 +1,7 @@
 var g_height = display_get_gui_height();
 var g_width = display_get_gui_width();
-color_border = c_black;
-color_background = c_white;
+var color_border = c_black;
+var color_background = c_white;
 draw_set(c_black,0.2);
 draw_rectangle(
 	ui_padding_x+ui_border_size,
@@ -100,5 +100,5 @@ for(var row = 0; row < inventory_rows; row++){
 			inventory_items[inventory_index].quantity);
 	}
 
-}
+} 
 }
