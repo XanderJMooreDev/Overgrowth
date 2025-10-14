@@ -1,0 +1,1 @@
+room_goto(room_cave_layout_1);

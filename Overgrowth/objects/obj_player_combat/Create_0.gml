@@ -1,7 +1,16 @@
 playerSpeed = 5;
+meleeAtk = 1;
+defense = 1;
+speedBuffed = 1;
+
+facingDir = 0;
+
+maxHp = 10;
+hp = maxHp;
 
 meleePerk = "None";
 items = [ "None", "None" ];
+iFrames = 0;
 
 state = "None";
 
@@ -15,6 +24,8 @@ joystickX = 0;
 joystickY = 0;
 
 meleeCooldown = 0;
+effectTimer = 0;
+effectedType = "None";
 
 update_cooldowns = function() {
 	if meleeCooldown > 0 {
@@ -22,6 +33,13 @@ update_cooldowns = function() {
 	}
 	else if state == "Melee Stab" {
 		state = "None";
+	}
+	
+	if effectTimer > 0 {
+		effectTimer -= 1 / game_get_speed(gamespeed_fps);
+	}
+	else if effectedType != "None" {
+		effectedType = "None";
 	}
 }
 
