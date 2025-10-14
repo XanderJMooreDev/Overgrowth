@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Placeholders",
-    "path":"folders/Sprites/Placeholders.yy",
+    "name":"Overgrowth",
+    "path":"Overgrowth.yyp",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -8,10 +8,6 @@ keyStab =  keyboard_check(vk_space);
 joystickX = (keyRight - keyLeft) * playerSpeed;
 joystickY = (keyDown - keyUp) * playerSpeed;
 
-if joystickX != 0 {
-	facingDir = joystickX / playerSpeed;
-}
-
 if attempt_move(x + joystickX, y) {
 	x += joystickX;
 }
@@ -25,6 +21,5 @@ update_cooldowns();
 if meleeCooldown <= 0 && keyStab {
 	meleeCooldown = 3;
 	state = "Melee Stab";
-	instance_create_layer(x + (facingDir * 55), y, "Instances", obj_stab_hitbox);
+	instance_create_layer(x, y, "Instances", obj_stab_hitbox);
 }
-

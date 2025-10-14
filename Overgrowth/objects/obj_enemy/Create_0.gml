@@ -4,17 +4,11 @@ joystickY = 0;
 velocityX = 0;
 velocityY = 0;
 
-// Enemy-specific properties. Set by the creator object. 
 hp = 5;
 moveSpeed = 2;
 attackDmg = 0;
-
-// Applies to the effect they've been inflicted with
 effectApplied = "None";
 effectTime = 0;
-
-//Applies to the effect they inflict
-effectUse = "None";
 
 iFrames = 0;
 
