@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slot4",
+  "%Name":"item_melee",
   "eventList":[],
   "managed":true,
-  "name":"obj_slot4",
+  "name":"item_melee",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -27,10 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"slot",
-    "path":"sprites/slot/slot.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

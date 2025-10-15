@@ -1,4 +1,4 @@
-var item = choose(item_melee, item_ranged, item_none, item_seed, item_util);
+item = choose(item_melee, item_ranged, item_none, item_seed, item_util);
 switch(item)
 {
 	case item_melee:
