@@ -41,6 +41,10 @@ update_cooldowns = function() {
 	else if effectedType != "None" {
 		effectedType = "None";
 	}
+	
+	if iFrames > 0 {
+		iFrames -= 1 / game_get_speed(gamespeed_fps);
+	}
 }
 
 // Returns whether an attempted move will put us in an impossible spot. 
