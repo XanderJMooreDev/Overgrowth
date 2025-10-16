@@ -3,6 +3,9 @@ meleeAtk = 1;
 defense = 1;
 speedBuffed = 1;
 
+maxManna = 25;
+manna = maxManna;
+
 facingDir = 0;
 
 maxHp = 10;
@@ -39,6 +42,13 @@ update_cooldowns = function() {
 		effectTimer -= 1 / game_get_speed(gamespeed_fps);
 	}
 	else if effectedType != "None" {
+		if effectedType == "Weakened" {
+			meleeAtk /= .75;
+		}
+		else if effectedType == "Slowed" {
+			meleeAtk /= .5;
+		}
+		
 		effectedType = "None";
 	}
 	

@@ -27,4 +27,3 @@ if meleeCooldown <= 0 && keyStab {
 	state = "Melee Stab";
 	instance_create_layer(x + (facingDir * 55), y, "Instances", obj_stab_hitbox);
 }
-

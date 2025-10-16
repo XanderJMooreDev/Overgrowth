@@ -1,16 +1,34 @@
-enemy_joystick(obj_player_combat);
-
-if attempt_move(x + joystickX, y) {
-	x += joystickX;
-}
-
-if attempt_move(x, y + joystickY) {
-	y += joystickY;
+if moveType == "Basic" {
+	basic_move();
 }
 
 if place_meeting(x, y, obj_stab_hitbox) && obj_player_combat.state == "Melee Stab" && iFrames <= 0 {
 	hp -= obj_player_combat.meleeAtk;
 	iFrames = 2;
+	
+	obj_player_combat.manna += 5;
+	
+	if obj_player_combat.manna > obj_player_combat.maxManna {
+		obj_player_combat.manna = obj_player_combat.maxManna;
+	}
+	
+	if type == "Apple" {
+		obj_player_combat.hp += 15;
+	
+		if obj_player_combat.hp > obj_player_combat.maxHp {
+			obj_player_combat.hp = obj_player_combat.maxHp;
+		}
+	}
+	
+	if obj_player_combat.meleePerk == "Chili" {
+		effectedType = "Burn";
+		effectTimer = 4;
+	}
+	else if obj_player_combat.meleePerk == "Mushroom1" {
+		effectedType = "Weakened";
+		effectTimer = 4;
+	}
+	
 	show_debug_message(hp);
 }
 

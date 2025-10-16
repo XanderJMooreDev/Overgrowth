@@ -7,11 +7,13 @@ velocityY = 0;
 // Enemy-specific properties. Set by the creator object. 
 hp = 5;
 moveSpeed = 2;
-attackDmg = 0;
+meleeAtk = 0;
+moveType = "Basic";
+type = "None";
 
 // Applies to the effect they've been inflicted with
-effectApplied = "None";
-effectTime = 0;
+effectedType = "None";
+effectTimer = 0;
 
 //Applies to the effect they inflict
 effectUse = "None";
@@ -52,5 +54,29 @@ attempt_move = function(moveX, moveY) {
 update_cooldowns = function() {
 	if iFrames > 0 {
 		iFrames -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if effectTimer > 0 {
+		effectTimer -= 1 / game_get_speed(gamespeed_fps);
+	}
+	else if effectedType != "None" {
+		if effectedType == "Weakened" {
+			meleeAtk /= .75;
+		}
+		
+		effectedType = "None";
+	}
+}
+
+// The simple following-based movement method that most enemies use. 
+basic_move = function() {
+	enemy_joystick(obj_player_combat);
+
+	if attempt_move(x + joystickX, y) {
+		x += joystickX;
+	}
+
+	if attempt_move(x, y + joystickY) {
+		y += joystickY;
 	}
 }
