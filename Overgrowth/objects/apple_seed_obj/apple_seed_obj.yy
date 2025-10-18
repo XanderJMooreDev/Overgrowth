@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slot2",
-  "eventList":[],
+  "%Name":"apple_seed_obj",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_slot2",
+  "name":"apple_seed_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"seeds",
+    "path":"folders/Objects/seeds.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"slot",
-    "path":"sprites/slot/slot.yy",
+    "name":"apple_seeds",
+    "path":"sprites/apple_seeds/apple_seeds.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,0 +1,1 @@
+apple_seed_obj.num += 1;

@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slot4",
-  "eventList":[],
+  "%Name":"corn_seeds_obj",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_slot4",
+  "name":"corn_seeds_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"seeds",
+    "path":"folders/Objects/seeds.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"slot",
-    "path":"sprites/slot/slot.yy",
+    "name":"corn_seeds",
+    "path":"sprites/corn_seeds/corn_seeds.yy",
   },
   "spriteMaskId":null,
   "visible":true,

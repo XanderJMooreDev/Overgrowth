@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_slot5",
+  "%Name":"banana_seeds_obj",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_slot5",
+  "name":"banana_seeds_obj",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"seeds",
+    "path":"folders/Objects/seeds.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"slot",
-    "path":"sprites/slot/slot.yy",
+    "name":"banana_seeds",
+    "path":"sprites/banana_seeds/banana_seeds.yy",
   },
   "spriteMaskId":null,
   "visible":true,
