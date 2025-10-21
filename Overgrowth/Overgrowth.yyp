@@ -61,6 +61,7 @@
     {"id":{"name":"obj_player_combat","path":"objects/obj_player_combat/obj_player_combat.yy",},},
     {"id":{"name":"obj_stab_hitbox","path":"objects/obj_stab_hitbox/obj_stab_hitbox.yy",},},
     {"id":{"name":"obj_start_button","path":"objects/obj_start_button/obj_start_button.yy",},},
+    {"id":{"name":"obj_terrain","path":"objects/obj_terrain/obj_terrain.yy",},},
     {"id":{"name":"path_farm","path":"objects/path_farm/path_farm.yy",},},
     {"id":{"name":"Player","path":"objects/Player/Player.yy",},},
     {"id":{"name":"Seed_spot","path":"objects/Seed_spot/Seed_spot.yy",},},
@@ -98,8 +99,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"room_main_menu","path":"rooms/room_main_menu/room_main_menu.yy",},},
+    {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"room_cave_layout_1","path":"rooms/room_cave_layout_1/room_cave_layout_1.yy",},},
     {"roomId":{"name":"Inside_Home","path":"rooms/Inside_Home/Inside_Home.yy",},},
     {"roomId":{"name":"farm","path":"rooms/farm/farm.yy",},},

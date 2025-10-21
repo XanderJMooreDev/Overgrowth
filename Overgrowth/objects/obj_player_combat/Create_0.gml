@@ -6,13 +6,18 @@ speedBuffed = 1;
 maxManna = 25;
 manna = maxManna;
 
+item1Timer = 0;
+item1Cooldown = 0;
+item2Timer = 0;
+item2Cooldown = 0;
+
 facingDir = 0;
 
 maxHp = 10;
 hp = maxHp;
 
 meleePerk = "None";
-items = [ "None", "None" ];
+items = [ "Carrot", "None" ];
 iFrames = 0;
 
 state = "None";
@@ -22,6 +27,8 @@ keyDown = keyboard_check(ord("S"));
 keyLeft = keyboard_check(ord("A"));
 keyRight = keyboard_check(ord("D"));
 keyStab = keyboard_check(vk_space);
+keyItem1 = keyboard_check(ord("Z"));
+keyItem2 = keyboard_check(ord("X"));
 
 joystickX = 0;
 joystickY = 0;
@@ -54,6 +61,22 @@ update_cooldowns = function() {
 	
 	if iFrames > 0 {
 		iFrames -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if item1Cooldown > 0 {
+		item1Cooldown -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if item1Timer > 0 {
+		item1Timer -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if item2Cooldown > 0 {
+		item2Cooldown -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if item2Timer > 0 {
+		item2Timer -= 1 / game_get_speed(gamespeed_fps);
 	}
 }
 
