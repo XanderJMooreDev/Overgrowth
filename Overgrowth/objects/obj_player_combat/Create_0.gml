@@ -16,7 +16,7 @@ facingDir = 0;
 maxHp = 10;
 hp = maxHp;
 
-meleePerk = "None";
+meleePerk = "Broccoli";
 items = [ "Carrot", "None" ];
 iFrames = 0;
 

@@ -3,7 +3,7 @@ if moveType == "Basic" {
 }
 
 if place_meeting(x, y, obj_stab_hitbox) && obj_player_combat.state == "Melee Stab" && iFrames <= 0 {
-	if item1Timer > 0 && items[0] == "Mushroom2" || item2Timer > 0 && items[1] == "Mushroom2" {
+	if obj_player_combat.item1Timer > 0 && obj_player_combat.items[0] == "Mushroom2" || obj_player_combat.item2Timer > 0 && obj_player_combat.items[1] == "Mushroom2" {
 		hp -= obj_player_combat.meleeAtk * 1.25;
 	}
 	else {
