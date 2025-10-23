@@ -20,4 +20,13 @@ draw_text(1120,128,"3");
 draw_text(1184,128,"4");
 draw_text(1248,128,"5");
 
-//num of seeds respective to item code
+for(var i = 0;i < 5;i++){
+draw_sprite(Sprite11,-1,960+(xx * i),648);
+}
+
+//plant products
+draw_sprite(corn_plant_spr,-1,960,656);
+draw_sprite(apple_plant_spr,-1,960+xx,656);
+draw_sprite(banana_plant_spr,-1,960+xx+xx,656);
+draw_sprite(chili_plant_spr,-1,960+xx+xx+xx,656);
+draw_sprite(broc_plant_spr,-1,960+xx+xx+xx+xx,656);
