@@ -1,3 +1,7 @@
+if !instance_exists(obj_player_combat) {
+	return;
+}
+
 if moveType == "Basic" {
 	basic_move();
 }

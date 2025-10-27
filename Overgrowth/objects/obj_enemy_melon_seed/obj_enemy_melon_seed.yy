@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start_stairs",
+  "%Name":"obj_enemy_melon_seed",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_start_stairs",
+  "name":"obj_enemy_melon_seed",
   "overriddenProperties":[],
   "parent":{
-    "name":"Elements",
-    "path":"folders/Objects/Elements.yy",
+    "name":"Projectiles",
+    "path":"folders/Objects/Elements/Projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite3",
-    "path":"sprites/Sprite3/Sprite3.yy",
+    "name":"apple_seeds",
+    "path":"sprites/apple_seeds/apple_seeds.yy",
   },
   "spriteMaskId":null,
   "visible":true,

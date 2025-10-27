@@ -69,6 +69,7 @@
     {"id":{"name":"dore","path":"objects/dore/dore.yy",},},
     {"id":{"name":"obj_controller","path":"objects/obj_controller/obj_controller.yy",},},
     {"id":{"name":"obj_enemy_manager","path":"objects/obj_enemy_manager/obj_enemy_manager.yy",},},
+    {"id":{"name":"obj_enemy_melon_seed","path":"objects/obj_enemy_melon_seed/obj_enemy_melon_seed.yy",},},
     {"id":{"name":"obj_enemy_spawn_field_1","path":"objects/obj_enemy_spawn_field_1/obj_enemy_spawn_field_1.yy",},},
     {"id":{"name":"obj_enemy_spawn_field_2","path":"objects/obj_enemy_spawn_field_2/obj_enemy_spawn_field_2.yy",},},
     {"id":{"name":"obj_enemy_spawn_field_3","path":"objects/obj_enemy_spawn_field_3/obj_enemy_spawn_field_3.yy",},},
@@ -152,7 +153,6 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"room_main_menu","path":"rooms/room_main_menu/room_main_menu.yy",},},
     {"roomId":{"name":"Home","path":"rooms/Home/Home.yy",},},
     {"roomId":{"name":"room_cave_layout_1","path":"rooms/room_cave_layout_1/room_cave_layout_1.yy",},},
     {"roomId":{"name":"Inside_Home","path":"rooms/Inside_Home/Inside_Home.yy",},},
@@ -166,6 +166,7 @@
     {"roomId":{"name":"room_cave_layout_6","path":"rooms/room_cave_layout_6/room_cave_layout_6.yy",},},
     {"roomId":{"name":"room_cave_layout_7","path":"rooms/room_cave_layout_7/room_cave_layout_7.yy",},},
     {"roomId":{"name":"room_cave_layout_8","path":"rooms/room_cave_layout_8/room_cave_layout_8.yy",},},
+    {"roomId":{"name":"room_main_menu","path":"rooms/room_main_menu/room_main_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

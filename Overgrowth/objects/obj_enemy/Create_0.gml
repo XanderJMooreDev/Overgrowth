@@ -10,6 +10,8 @@ moveSpeed = 2;
 meleeAtk = 0;
 moveType = "Basic";
 type = "None";
+shootCooldown = 1;
+projectile = noone;
 
 // Applies to the effect they've been inflicted with
 effectedType = "None";
@@ -48,7 +50,7 @@ enemy_joystick = function(target) {
 
 // Returns whether an attempted move will put us in an impossible spot. 
 attempt_move = function(moveX, moveY) {
-	return !place_meeting(moveX, moveY, obj_terrain);
+	return !place_meeting(moveX, moveY, obj_wall_collision);
 }
 
 update_cooldowns = function() {
@@ -65,6 +67,22 @@ update_cooldowns = function() {
 		}
 		
 		effectedType = "None";
+	}
+	
+	if shootCooldown > 0 {
+		shootCooldown -= 1 / game_get_speed(gamespeed_fps);
+	}
+	else if type == "Melon" {
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_melon_seed);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+		}
+		else {
+			projectile.speedY = joystickY * 3;
+		}
+		
+		shootCooldown = .4;
 	}
 }
 

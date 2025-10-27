@@ -86,5 +86,5 @@ update_cooldowns = function() {
 
 // Returns whether an attempted move will put us in an impossible spot. 
 attempt_move = function(moveX, moveY) {
-	return !place_meeting(moveX, moveY, obj_terrain);
+	return !place_meeting(moveX, moveY, obj_wall_collision);
 }

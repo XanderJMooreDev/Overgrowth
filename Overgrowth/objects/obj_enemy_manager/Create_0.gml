@@ -1,4 +1,4 @@
-caveLevel = -1;
+caveLevel = 0;
 
 enemiesInRoom = 0;
 
@@ -8,13 +8,13 @@ enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5, 
 enemy_spd =   [ 1,      1,       1,      1,           1,        1,           1,          2,         5,        2,          1 ];
 enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Bouncy",   "Burst",   "Burst",  "Basic",    "Basic"];
 
-levels = [ room_cave_layout_1 ];
+levels = [ room_cave_layout_1, room_cave_layout_2, room_cave_layout_3, room_cave_layout_4, room_cave_layout_5, room_cave_layout_6, room_cave_layout_7, room_cave_layout_8 ];
 
-level_seed = array_create(20);
+level_seed = array_create(50);
 
 // Generates which level layout to use for each layer (1-30)
 for (var i = 0; i < array_length(level_seed); i++) {
-	array_set(level_seed, i, levels[irandom_range(0, array_length(levels) - 1)]);
+	level_seed[i] = levels[irandom_range(0, array_length(levels) - 1)];
 }
 
 spawn_enemy = function(enemyId, xPos, yPos) {
@@ -30,9 +30,6 @@ spawn_enemy = function(enemyId, xPos, yPos) {
 generate_enemy = function(xApprox, yApprox) {
 	if random(150) == 33 {
 		spawn_enemy(13, xApprox + random_range(-100, 100), yApprox + random_range(-100, 100));
-	}
-	else if caveLevel == -1 {
-		spawn_enemy(irandom_range(2, 3), xApprox + random_range(-100, 100), yApprox + random_range(-100, 100));
 	}
 	else if caveLevel <= 10 {
 		spawn_enemy(irandom_range(0, 2), xApprox + random_range(-100, 100), yApprox + random_range(-100, 100));
