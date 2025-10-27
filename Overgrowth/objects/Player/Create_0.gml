@@ -11,3 +11,5 @@ broc_num = 0;
 chili_num = 0;
 apple_num = 0;
 corn_num = 0;
+
+coins = 0;

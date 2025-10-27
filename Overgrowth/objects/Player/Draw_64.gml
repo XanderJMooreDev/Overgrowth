@@ -11,3 +11,7 @@ draw_text(992+64,608,apple_num);
 draw_text(992+64+64,608,banana_num);
 draw_text(992+64+64+64,608,chili_num);
 draw_text(992+64+64+64+64,608,broc_num);
+
+
+draw_sprite(coin_spr,-1,32,32);
+draw_text(32,64,coins);
