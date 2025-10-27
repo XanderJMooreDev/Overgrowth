@@ -21,7 +21,66 @@ joystickX = (keyRight - keyLeft) * playerSpeed;
 joystickY = (keyDown - keyUp) * playerSpeed;
 
 if joystickX != 0 {
-	facingDir = joystickX / playerSpeed;
+	facingDirX = joystickX / playerSpeed;
+	totalFacingDir = 0;
+}
+else if joystickY != 0 {
+	facingDirY = joystickY / playerSpeed;
+	totalFacingDir = 1;
+}
+
+if item1Cooldown <= 0 && keyItem1 && items[0] == "Melon" {
+	projectile = instance_create_layer(x, y, "Instances", obj_player_melon_seed);
+	if totalFacingDir == 0 {
+		projectile.speedX = facingDirX * 7;
+	}
+	else {
+		projectile.speedY = facingDirY * 7;
+	}
+	
+	if items[0] == "Melon" {
+		item1Cooldown = .2;
+	}
+	else {
+		item2Cooldown = .2;
+	}
+}
+
+if item1Cooldown <= 0 && keyItem1 && items[0] == "Banana" {
+	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	if totalFacingDir == 0 {
+		projectile.speedX = facingDirX * 7;
+	}
+	else {
+		projectile.speedY = facingDirY * 7;
+	}
+	
+	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	if totalFacingDir == 0 {
+		projectile.speedX = facingDirX * 7;
+		projectile.speedY = facingDirY * 7;
+	}
+	else {
+		projectile.speedX = facingDirX * 7;
+		projectile.speedY = facingDirY * 7;
+	}
+	
+	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	if totalFacingDir == 0 {
+		projectile.speedX = facingDirX * 7;
+		projectile.speedY = -facingDirY * 7;
+	}
+	else {
+		projectile.speedX = -facingDirX * 7;
+		projectile.speedY = facingDirY * 7;
+	}
+	
+	if items[0] == "Banana" {
+		item1Cooldown = 2;
+	}
+	else {
+		item2Cooldown = 2;
+	}
 }
 
 if item1Timer > 0 && items[0] == "Carrot" || item2Timer > 0 && items[1] == "Carrot" {
@@ -42,5 +101,5 @@ update_cooldowns();
 if meleeCooldown <= 0 && keyStab {
 	meleeCooldown = 3;
 	state = "Melee Stab";
-	instance_create_layer(x + (facingDir * 55), y, "Instances", obj_stab_hitbox);
+	instance_create_layer(x + (facingDirX * 55), y, "Instances", obj_stab_hitbox);
 }

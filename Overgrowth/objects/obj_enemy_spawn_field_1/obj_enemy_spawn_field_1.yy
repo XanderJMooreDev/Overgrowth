@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start_button",
+  "%Name":"obj_enemy_spawn_field_1",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_start_button",
+  "name":"obj_enemy_spawn_field_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Spawn Fields",
+    "path":"folders/Objects/Spawn Fields.yy",
   },
   "parentObjectId":null,
   "persistent":false,

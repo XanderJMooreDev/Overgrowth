@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_spawn_field",
+  "%Name":"obj_enemy_spawn_field_5",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_enemy_spawn_field",
+  "name":"obj_enemy_spawn_field_5",
   "overriddenProperties":[],
   "parent":{
-    "name":"Managers",
-    "path":"folders/Objects/Managers.yy",
+    "name":"Spawn Fields",
+    "path":"folders/Objects/Spawn Fields.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_spawn_field",
-    "path":"sprites/spr_enemy_spawn_field/spr_enemy_spawn_field.yy",
+    "name":"spr_enemy_spawn_field_5",
+    "path":"sprites/spr_enemy_spawn_field_5/spr_enemy_spawn_field_5.yy",
   },
   "spriteMaskId":null,
   "visible":true,
