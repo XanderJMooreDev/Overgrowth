@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start_button",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_wall_collision",
+  "eventList":[],
   "managed":true,
-  "name":"obj_start_button",
+  "name":"obj_wall_collision",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Collisions",
+    "path":"folders/Objects/Collisions.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_spawn_field_1",
-    "path":"sprites/spr_enemy_spawn_field_1/spr_enemy_spawn_field_1.yy",
+    "name":"spr_wall_collision",
+    "path":"sprites/spr_wall_collision/spr_wall_collision.yy",
   },
   "spriteMaskId":null,
   "visible":true,

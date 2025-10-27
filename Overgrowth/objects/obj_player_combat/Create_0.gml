@@ -3,6 +3,8 @@ meleeAtk = 1;
 defense = 1;
 speedBuffed = 1;
 
+projectile = noone;
+
 maxManna = 25;
 manna = maxManna;
 
@@ -11,13 +13,15 @@ item1Cooldown = 0;
 item2Timer = 0;
 item2Cooldown = 0;
 
-facingDir = 0;
+facingDirX = 0;
+facingDirY = 0;
+totalFacingDir = 0;
 
 maxHp = 10;
 hp = maxHp;
 
 meleePerk = "Broccoli";
-items = [ "Carrot", "None" ];
+items = [ "Banana", "None" ];
 iFrames = 0;
 
 state = "None";

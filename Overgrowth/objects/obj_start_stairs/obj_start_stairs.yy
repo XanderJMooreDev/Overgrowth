@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start_button",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_start_stairs",
+  "eventList":[],
   "managed":true,
-  "name":"obj_start_button",
+  "name":"obj_start_stairs",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Elements",
+    "path":"folders/Objects/Elements.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_spawn_field_1",
-    "path":"sprites/spr_enemy_spawn_field_1/spr_enemy_spawn_field_1.yy",
+    "name":"Sprite3",
+    "path":"sprites/Sprite3/Sprite3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

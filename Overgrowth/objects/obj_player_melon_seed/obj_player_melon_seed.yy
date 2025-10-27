@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_start_button",
+  "%Name":"obj_player_melon_seed",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_start_button",
+  "name":"obj_player_melon_seed",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Projectiles",
+    "path":"folders/Objects/Elements/Projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_enemy_spawn_field_1",
-    "path":"sprites/spr_enemy_spawn_field_1/spr_enemy_spawn_field_1.yy",
+    "name":"apple_seeds",
+    "path":"sprites/apple_seeds/apple_seeds.yy",
   },
   "spriteMaskId":null,
   "visible":true,
