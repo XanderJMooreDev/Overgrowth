@@ -7,6 +7,8 @@ enemy_atk =   [ 1,      1,       1,      1,           1,        4,           2, 
 enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5,          12,        4,        4,          6 ];
 enemy_spd =   [ 1,      1,       1,      1,           1,        1,           1,          2,         5,        2,          1 ];
 enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Bouncy",   "Burst",   "Burst",  "Basic",    "Basic"];
+enemy_walk =  [ spr_chili_walk,   spr_melon_walk,   spr_corn_walk,   spr_mushroom1_walk,    ];
+enemy_attack =[ spr_chili_attack, spr_melon_attack, spr_corn_attack, spr_mushroom1_attack,  ];
 
 levels = [ room_cave_layout_1, room_cave_layout_2, room_cave_layout_3, room_cave_layout_4, room_cave_layout_5, room_cave_layout_6, room_cave_layout_7, room_cave_layout_8 ];
 
@@ -25,6 +27,8 @@ spawn_enemy = function(enemyId, xPos, yPos) {
 	enemySpawning.meleeAtk = enemy_atk[enemyId];
 	enemySpawning.moveSpeed = enemy_spd[enemyId];
 	enemySpawning.moveType = enemy_moves[enemyId];
+	enemySpawning.walkFrame = enemy_walk[enemyId];
+	enemySpawning.attackFrame = enemy_attack[enemyId];
 }
 
 generate_enemy = function(xApprox, yApprox) {

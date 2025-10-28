@@ -12,6 +12,9 @@ moveType = "Basic";
 type = "None";
 shootCooldown = 1;
 projectile = noone;
+walkFrame = spr_chili_walk;
+attackFrame = spr_chili_attack;
+hitAnimCooldown = 0;
 
 // Applies to the effect they've been inflicted with
 effectedType = "None";
@@ -117,6 +120,10 @@ update_cooldowns = function() {
 		}
 		
 		shootCooldown = 3;
+	}
+	
+	if hitAnimCooldown > 0 {
+		hitAnimCooldown -= 1 / game_get_speed(gamespeed_fps);
 	}
 }
 

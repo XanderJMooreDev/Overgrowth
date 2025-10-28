@@ -2,7 +2,7 @@ if !instance_exists(obj_player_combat) {
 	return;
 }
 
-if moveType == "Basic" {
+if !(type == "Banana" && shootCooldown > 3) && moveType == "Basic" {
 	basic_move();
 }
 
@@ -46,6 +46,16 @@ if hp <= 0 {
 	effect_create_layer("Instances", ef_smoke, x, y, 10, c_green);
 	obj_enemy_manager.enemiesInRoom--;
 	instance_destroy();
+}
+
+if type == "Banana" && shootCooldown > 3 {
+	sprite_index = spr_banana_shoot;
+}
+else if hitAnimCooldown > 0 {
+	sprite_index = attackFrame;
+}
+else {
+	sprite_index = walkFrame;
 }
 
 update_cooldowns();

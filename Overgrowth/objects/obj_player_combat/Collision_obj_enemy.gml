@@ -1,4 +1,6 @@
 if iFrames <= 0 {
+	other.hitAnimCooldown = 1;
+	
 	if item1Timer > 0 && items[0] == "Coconut" || item2Timer > 0 && items[1] == "Coconut" {
 		hp -= obj_enemy.meleeAtk * .75;
 	}
