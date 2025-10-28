@@ -84,6 +84,40 @@ update_cooldowns = function() {
 		
 		shootCooldown = .4;
 	}
+	else if type == "Banana" {
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+		}
+		else {
+			projectile.speedY = joystickY * 3;
+		}
+		
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+			projectile.speedY = joystickX * 3;
+		}
+		else {
+			projectile.speedX = joystickY * 3;
+			projectile.speedY = joystickY * 3;
+		}
+		
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+			projectile.speedY = -joystickX * 3;
+		}
+		else {
+			projectile.speedX = -joystickY * 3;
+			projectile.speedY = joystickY * 3;
+		}
+		
+		shootCooldown = 3;
+	}
 }
 
 // The simple following-based movement method that most enemies use. 

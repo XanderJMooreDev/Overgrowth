@@ -5,3 +5,5 @@ else {
 	obj_player_combat.x = x;
 	obj_player_combat.y = y;
 }
+
+instance_destroy();

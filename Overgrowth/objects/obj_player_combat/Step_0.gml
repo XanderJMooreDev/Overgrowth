@@ -48,6 +48,7 @@ if item1Cooldown <= 0 && keyItem1 && items[0] == "Melon" {
 
 if item1Cooldown <= 0 && keyItem1 && items[0] == "Banana" {
 	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	
 	if totalFacingDir == 0 {
 		projectile.speedX = facingDirX * 7;
 	}
@@ -56,6 +57,7 @@ if item1Cooldown <= 0 && keyItem1 && items[0] == "Banana" {
 	}
 	
 	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	
 	if totalFacingDir == 0 {
 		projectile.speedX = facingDirX * 7;
 		projectile.speedY = facingDirY * 7;
@@ -66,6 +68,7 @@ if item1Cooldown <= 0 && keyItem1 && items[0] == "Banana" {
 	}
 	
 	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
+	
 	if totalFacingDir == 0 {
 		projectile.speedX = facingDirX * 7;
 		projectile.speedY = -facingDirY * 7;
