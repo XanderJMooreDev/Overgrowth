@@ -2,13 +2,13 @@ caveLevel = 0;
 
 enemiesInRoom = 0;
 
-enemy_names = ["Chili", "Melon", "Corn", "Mushroom1", "Banana", "Mushroom2", "Broccoli", "Coconut", "Carrot", "Cherries", "Grapes", "Rotten Apple", "Lantern", "Apple"];
-enemy_atk =   [ 1,      1,       1,      1,           1,        4,           2,          2,         2,        0,          2 ];
-enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5,          12,        4,        4,          6 ];
-enemy_spd =   [ 1,      1,       1,      1,           1,        1,           1,          2,         5,        2,          1 ];
-enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Bouncy",   "Burst",   "Burst",  "Basic",    "Basic"];
-enemy_walk =  [ spr_chili_walk,   spr_melon_walk,   spr_corn_walk,   spr_mushroom1_walk,    ];
-enemy_attack =[ spr_chili_attack, spr_melon_attack, spr_corn_attack, spr_mushroom1_attack,  ];
+enemy_names = ["Chili", "Melon", "Corn", "Mushroom1", "Banana", "Mushroom2", "Broccoli", "Coconut", "Carrot", "Grapes", "Rotten Apple", "Lantern", "Apple"];
+enemy_atk =   [ 1,      1,       1,      1,           1,        4,           2,          2,         2,        2 ];
+enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5,          12,        4,        6 ];
+enemy_spd =   [ 1,      1,       1,      1,           1,        1,           1,          2,         5,        1 ];
+enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Bouncy",   "Burst",   "Burst",  "Basic"];
+enemy_walk =  [ spr_chili_walk,   spr_melon_walk,   spr_corn_walk,   spr_mushroom1_walk,   spr_banana_walk,   spr_mushroom2_walk,   spr_broccoli_walk,    ];
+enemy_attack =[ spr_chili_attack, spr_melon_attack, spr_corn_attack, spr_mushroom1_attack, spr_banana_attack, spr_mushroom2_attack, spr_broccoli_attack,  ];
 
 levels = [ room_cave_layout_1, room_cave_layout_2, room_cave_layout_3, room_cave_layout_4, room_cave_layout_5, room_cave_layout_6, room_cave_layout_7, room_cave_layout_8 ];
 
