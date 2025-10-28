@@ -6,9 +6,24 @@ velocityY = 0;
 
 hp = 5;
 moveSpeed = 2;
+<<<<<<< HEAD
 attackDmg = 0;
 effectApplied = "None";
 effectTime = 0;
+=======
+meleeAtk = 0;
+moveType = "Basic";
+type = "None";
+shootCooldown = 1;
+projectile = noone;
+walkFrame = spr_chili_walk;
+attackFrame = spr_chili_attack;
+hitAnimCooldown = 0;
+
+// Applies to the effect they've been inflicted with
+effectedType = "None";
+effectTimer = 0;
+>>>>>>> origin/Functional
 
 iFrames = 0;
 
@@ -40,11 +55,89 @@ enemy_joystick = function(target) {
 
 // Returns whether an attempted move will put us in an impossible spot. 
 attempt_move = function(moveX, moveY) {
-	return !place_meeting(moveX, moveY, obj_terrain);
+	return !place_meeting(moveX, moveY, obj_wall_collision);
 }
 
 update_cooldowns = function() {
 	if iFrames > 0 {
 		iFrames -= 1 / game_get_speed(gamespeed_fps);
+	}
+	
+	if effectTimer > 0 {
+		effectTimer -= 1 / game_get_speed(gamespeed_fps);
+	}
+	else if effectedType != "None" {
+		if effectedType == "Weakened" {
+			meleeAtk /= .75;
+		}
+		
+		effectedType = "None";
+	}
+	
+	if shootCooldown > 0 {
+		shootCooldown -= 1 / game_get_speed(gamespeed_fps);
+	}
+	else if type == "Melon" {
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_melon_seed);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+		}
+		else {
+			projectile.speedY = joystickY * 3;
+		}
+		
+		shootCooldown = .4;
+	}
+	else if type == "Banana" {
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+		}
+		else {
+			projectile.speedY = joystickY * 3;
+		}
+		
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+			projectile.speedY = joystickX * 3;
+		}
+		else {
+			projectile.speedX = joystickY * 3;
+			projectile.speedY = joystickY * 3;
+		}
+		
+		projectile = instance_create_layer(x, y, "Instances", obj_enemy_banana);
+		
+		if abs(joystickX) > abs(joystickY) {
+			projectile.speedX = joystickX * 3;
+			projectile.speedY = -joystickX * 3;
+		}
+		else {
+			projectile.speedX = -joystickY * 3;
+			projectile.speedY = joystickY * 3;
+		}
+		
+		shootCooldown = 3;
+	}
+	
+	if hitAnimCooldown > 0 {
+		hitAnimCooldown -= 1 / game_get_speed(gamespeed_fps);
+	}
+}
+
+// The simple following-based movement method that most enemies use. 
+basic_move = function() {
+	enemy_joystick(obj_player_combat);
+
+	if attempt_move(x + joystickX, y) {
+		x += joystickX;
+	}
+
+	if attempt_move(x, y + joystickY) {
+		y += joystickY;
 	}
 }

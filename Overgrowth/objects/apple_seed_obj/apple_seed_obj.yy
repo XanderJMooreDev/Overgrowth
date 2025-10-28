@@ -1,0 +1,52 @@
+{
+  "$GMObject":"",
+<<<<<<<< HEAD:Overgrowth/objects/shop/shop.yy
+  "%Name":"shop",
+  "eventList":[],
+  "managed":true,
+  "name":"shop",
+  "overriddenProperties":[],
+  "parent":{
+    "name":"Collisions",
+    "path":"folders/Objects/Collisions.yy",
+========
+  "%Name":"apple_seed_obj",
+  "eventList":[],
+  "managed":true,
+  "name":"apple_seed_obj",
+  "overriddenProperties":[],
+  "parent":{
+    "name":"seeds",
+    "path":"folders/Objects/seeds.yy",
+>>>>>>>> origin/Functional:Overgrowth/objects/apple_seed_obj/apple_seed_obj.yy
+  },
+  "parentObjectId":null,
+  "persistent":false,
+  "physicsAngularDamping":0.1,
+  "physicsDensity":0.5,
+  "physicsFriction":0.2,
+  "physicsGroup":1,
+  "physicsKinematic":false,
+  "physicsLinearDamping":0.1,
+  "physicsObject":false,
+  "physicsRestitution":0.1,
+  "physicsSensor":false,
+  "physicsShape":1,
+  "physicsShapePoints":[],
+  "physicsStartAwake":true,
+  "properties":[],
+  "resourceType":"GMObject",
+  "resourceVersion":"2.0",
+  "solid":false,
+  "spriteId":{
+<<<<<<<< HEAD:Overgrowth/objects/shop/shop.yy
+    "name":"Sprite21",
+    "path":"sprites/Sprite21/Sprite21.yy",
+========
+    "name":"apple_seeds",
+    "path":"sprites/apple_seeds/apple_seeds.yy",
+>>>>>>>> origin/Functional:Overgrowth/objects/apple_seed_obj/apple_seed_obj.yy
+  },
+  "spriteMaskId":null,
+  "visible":true,
+}

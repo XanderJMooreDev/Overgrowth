@@ -1,0 +1,1 @@
+visible = obj_enemy_manager.enemiesInRoom <= 0;
