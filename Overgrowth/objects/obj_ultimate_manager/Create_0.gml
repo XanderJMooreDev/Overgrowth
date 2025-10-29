@@ -1,4 +1,3 @@
-chiliUnlocked = true;
 melonUnlocked = false;
 mushroom1Unlocked = false;
 bananaUnlocked = false;
@@ -7,9 +6,9 @@ broccoliUnlocked = false;
 coconutUnlocked = false;
 carrotUnlocked = false;
 
-item1 = "None";
-item2 = "None";
-meleePerk = "None";
+item1 = "Coconut";
+item2 = "Banana";
+meleePerk = "Mushroom1";
 
 //seeds n fruits
 appleSeedNum = 0;

@@ -20,19 +20,19 @@ else {
 }
 
 if keyboard_check(ord("Z")) {
-	if keyboard_check(ord(2)) && obj_ultimate_manager.melonUnlocked {
+	if keyboard_check(ord(1)) && obj_ultimate_manager.melonUnlocked {
 		obj_ultimate_manager.item1 = "Melon";
 	}
-	else if keyboard_check(ord(4)) && obj_ultimate_manager.bananaUnlocked {
+	else if keyboard_check(ord(3)) && obj_ultimate_manager.bananaUnlocked {
 		obj_ultimate_manager.item1 = "Banana";
 	}
-	else if keyboard_check(ord(5)) && obj_ultimate_manager.mushroom2Unlocked {
+	else if keyboard_check(ord(4)) && obj_ultimate_manager.mushroom2Unlocked {
 		obj_ultimate_manager.item1 = "Mushroom2";
 	}
-	else if keyboard_check(ord(7)) && obj_ultimate_manager.coconutUnlocked {
+	else if keyboard_check(ord(6)) && obj_ultimate_manager.coconutUnlocked {
 		obj_ultimate_manager.item1 = "Coconut";
 	}
-	else if keyboard_check(ord(8)) && obj_ultimate_manager.carrotUnlocked {
+	else if keyboard_check(ord(7)) && obj_ultimate_manager.carrotUnlocked {
 		obj_ultimate_manager.item1 = "Carrot";
 	}
 	
@@ -40,19 +40,19 @@ if keyboard_check(ord("Z")) {
 }
 
 if keyboard_check(ord("X")) {
-	if keyboard_check(ord(2)) && obj_ultimate_manager.melonUnlocked {
+	if keyboard_check(ord(1)) && obj_ultimate_manager.melonUnlocked {
 		obj_ultimate_manager.item2 = "Melon";
 	}
-	else if keyboard_check(ord(4)) && obj_ultimate_manager.bananaUnlocked {
+	else if keyboard_check(ord(3)) && obj_ultimate_manager.bananaUnlocked {
 		obj_ultimate_manager.item2 = "Banana";
 	}
-	else if keyboard_check(ord(5)) && obj_ultimate_manager.mushroom2Unlocked {
+	else if keyboard_check(ord(4)) && obj_ultimate_manager.mushroom2Unlocked {
 		obj_ultimate_manager.item2 = "Mushroom2";
 	}
-	else if keyboard_check(ord(7)) && obj_ultimate_manager.coconutUnlocked {
+	else if keyboard_check(ord(6)) && obj_ultimate_manager.coconutUnlocked {
 		obj_ultimate_manager.item2 = "Coconut";
 	}
-	else if keyboard_check(ord(8)) && obj_ultimate_manager.carrotUnlocked {
+	else if keyboard_check(ord(7)) && obj_ultimate_manager.carrotUnlocked {
 		obj_ultimate_manager.item2 = "Carrot";
 	}
 	
@@ -60,13 +60,10 @@ if keyboard_check(ord("X")) {
 }
 
 if keyboard_check(vk_space) {
-	if keyboard_check(ord(1)) && obj_ultimate_manager.chiliUnlocked {
-		obj_ultimate_manager.meleePerk = "Chili";
-	}
-	else if keyboard_check(ord(3)) && obj_ultimate_manager.mushroom1Unlocked {
+	if keyboard_check(ord(2)) && obj_ultimate_manager.mushroom1Unlocked {
 		obj_ultimate_manager.meleePerk = "Mushroom1";
 	}
-	else if keyboard_check(ord(6)) && obj_ultimate_manager.broccoliUnlocked {
+	else if keyboard_check(ord(5)) && obj_ultimate_manager.broccoliUnlocked {
 		obj_ultimate_manager.meleePerk = "Broccoli";
 	}
 	

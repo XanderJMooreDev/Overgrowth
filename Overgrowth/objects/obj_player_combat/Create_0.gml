@@ -21,6 +21,9 @@ maxHp = 25;
 hp = maxHp;
 
 instance_create_layer(64, 704, "UI", obj_health_radial);
+instance_create_layer(64, 704, "UI", obj_melee_perk);
+instance_create_layer(32, 672, "UI", obj_item_1);
+instance_create_layer(96, 672, "UI", obj_item_2);
 
 meleePerk = obj_ultimate_manager.meleePerk;
 items = [ obj_ultimate_manager.item1, obj_ultimate_manager.item2 ];

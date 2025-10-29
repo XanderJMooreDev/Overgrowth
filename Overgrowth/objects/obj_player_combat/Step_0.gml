@@ -13,8 +13,8 @@ if item1Cooldown == 0 && keyItem1 && (items[0] == "Coconut" || items[0] == "Carr
 }
 
 if item2Cooldown == 0 && keyItem2 && (items[1] == "Coconut" || items[1] == "Carrot" ||items[1] == "Mushroom2") {
-	item1Cooldown = 20;
-	item1Timer = 12;
+	item2Cooldown = 20;
+	item2Timer = 12;
 }
 
 joystickX = (keyRight - keyLeft) * playerSpeed;
@@ -29,7 +29,7 @@ else if joystickY != 0 {
 	totalFacingDir = 1;
 }
 
-if item1Cooldown <= 0 && keyItem1 && items[0] == "Melon" {
+if (item1Cooldown <= 0 && keyItem1 && items[0] == "Melon") || (item2Cooldown <= 0 && keyItem2 && items[1] == "Melon") {
 	projectile = instance_create_layer(x, y, "Instances", obj_player_melon_seed);
 	if totalFacingDir == 0 {
 		projectile.speedX = facingDirX * 7;
@@ -46,7 +46,7 @@ if item1Cooldown <= 0 && keyItem1 && items[0] == "Melon" {
 	}
 }
 
-if item1Cooldown <= 0 && keyItem1 && items[0] == "Banana" {
+if (item1Cooldown <= 0 && keyItem1 && items[0] == "Banana") || (item2Cooldown <= 0 && keyItem2 && items[1] == "Banana") {
 	projectile = instance_create_layer(x, y, "Instances", obj_player_banana);
 	
 	if totalFacingDir == 0 {
@@ -128,4 +128,11 @@ else if joystickX != 0 || joystickY != 0 {
 }
 else {
 	sprite_index = spr_player_stand;
+}
+
+if iFrames > 0 {
+	image_alpha = iFrames % 1;
+}
+else {
+	image_alpha = 1;
 }

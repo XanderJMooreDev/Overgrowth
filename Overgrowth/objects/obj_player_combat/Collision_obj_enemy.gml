@@ -1,7 +1,7 @@
 if iFrames <= 0 {
 	other.hitAnimCooldown = 1;
 	
-	if item1Timer > 0 && items[0] == "Coconut" || item2Timer > 0 && items[1] == "Coconut" {
+	if item1Timer > 0 && items[0] == "Coconut" || item2Timer > 0 && items[1] == "Coconut" || other.effectedType == "Weakened" {
 		hp -= obj_enemy.meleeAtk * .75;
 	}
 	else {
@@ -19,15 +19,8 @@ if iFrames <= 0 {
 	
 	show_debug_message(other.type);
 	
-	if other.type == "Chili" {
-		
-	}
-	else if other.type == "Mushroom1" {
+	if other.type == "Mushroom1" {
 		effectedType = "Weakened";
 		meleeAtk *= .75;
-	}
-	else if other.type == "Grapes" {
-		effectedType = "Slowed";
-		playerSpeed *= .5;
 	}
 }

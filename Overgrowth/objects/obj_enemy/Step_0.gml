@@ -30,11 +30,7 @@ if place_meeting(x, y, obj_stab_hitbox) && obj_player_combat.state == "Melee Sta
 		}
 	}
 	
-	if obj_player_combat.meleePerk == "Chili" {
-		effectedType = "Burn";
-		effectTimer = 4;
-	}
-	else if obj_player_combat.meleePerk == "Mushroom1" {
+	if obj_player_combat.meleePerk == "Mushroom1" {
 		effectedType = "Weakened";
 		effectTimer = 4;
 	}
@@ -46,19 +42,20 @@ if hp <= 0 {
 	effect_create_layer("Instances", ef_smoke, x, y, 10, c_green);
 	obj_enemy_manager.enemiesInRoom--;
 	
-	switch (irandom_range(0, 3)) {
-		case 0:
-			instance_change(appleSeeds, true);
-			break;
-		case 1:
-			instance_change(brocSeeds, true);
-			break;
-		case 2:
-			instance_change(cornSeeds, true);
-			break;
-		default:
-			instance_change(bananaSeeds, true);
+	if irandom_range(0,1) == 1 {
+		instance_create_layer(x, y, "Instances", apple_seed_obj);
 	}
+	else if irandom_range(0,1) == 1 {
+		instance_create_layer(x, y, "Instances", brocolli_seeds_obj);
+	}
+	else if irandom_range(0,1) == 1 {
+		instance_create_layer(x, y, "Instances", banana_seeds_obj);
+	}
+	else {
+		instance_create_layer(x, y, "Instances", corn_seeds_obj);
+	}
+	
+	instance_destroy();
 }
 
 if type == "Banana" && shootCooldown > 3 {
@@ -72,3 +69,10 @@ else {
 }
 
 update_cooldowns();
+
+if iFrames > 0 {
+	image_alpha = iFrames % 1;
+}
+else {
+	image_alpha = 1;
+}

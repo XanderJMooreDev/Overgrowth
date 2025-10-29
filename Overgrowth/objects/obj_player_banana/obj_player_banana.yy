@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"apple_seeds",
-    "path":"sprites/apple_seeds/apple_seeds.yy",
+    "name":"spr_banana_proj",
+    "path":"sprites/spr_banana_proj/spr_banana_proj.yy",
   },
   "spriteMaskId":null,
   "visible":true,
