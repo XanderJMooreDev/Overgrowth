@@ -1,9 +1,4 @@
-playerSpeed = 5;
-<<<<<<< HEAD
-
-meleePerk = "None";
-items = [ "None", "None" ];
-=======
+playerSpeed = 1;
 meleeAtk = 1;
 defense = 1;
 speedBuffed = 1;
@@ -22,13 +17,14 @@ facingDirX = 0;
 facingDirY = 0;
 totalFacingDir = 0;
 
-maxHp = 10;
+maxHp = 25;
 hp = maxHp;
 
-meleePerk = "Broccoli";
-items = [ "Banana", "None" ];
+instance_create_layer(64, 704, "UI", obj_health_radial);
+
+meleePerk = obj_ultimate_manager.meleePerk;
+items = [ obj_ultimate_manager.item1, obj_ultimate_manager.item2 ];
 iFrames = 0;
->>>>>>> origin/Functional
 
 state = "None";
 
@@ -44,6 +40,8 @@ joystickX = 0;
 joystickY = 0;
 
 meleeCooldown = 0;
+effectTimer = 0;
+effectedType = "None";
 
 update_cooldowns = function() {
 	if meleeCooldown > 0 {
@@ -52,8 +50,6 @@ update_cooldowns = function() {
 	else if state == "Melee Stab" {
 		state = "None";
 	}
-<<<<<<< HEAD
-=======
 	
 	if effectTimer > 0 {
 		effectTimer -= 1 / game_get_speed(gamespeed_fps);
@@ -88,7 +84,6 @@ update_cooldowns = function() {
 	if item2Timer > 0 {
 		item2Timer -= 1 / game_get_speed(gamespeed_fps);
 	}
->>>>>>> origin/Functional
 }
 
 // Returns whether an attempted move will put us in an impossible spot. 

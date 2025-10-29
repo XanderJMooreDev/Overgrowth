@@ -1,29 +1,24 @@
-<<<<<<< HEAD
-enemy_names = ["Chili", "Mushroom1", "Broccoli", "Melon", "Banana", "Cherries", "Mushroom2", "Coconut", "Carrot", "Corn", "Grapes", "Rotten Apple", "Lantern", "Apple"];
-enemy_hp =    [ 5 ];
-enemy_atk =   [ 1 ];
-enemy_spd =   [ 1 ];
-enemy_eff =   ["Fire" , "Weaken"   , "Range"   , "Seeds", "Split" , "Lotto"   , "Attack"   , "Defense", "Speed" , " "   , "Slow"  , "Poison"      , " "      , "Heals"];
-=======
+
 caveLevel = 0;
 
 enemiesInRoom = 0;
 
-enemy_names = ["Chili", "Melon", "Corn", "Mushroom1", "Banana", "Mushroom2", "Broccoli", "Coconut", "Carrot", "Grapes", "Rotten Apple", "Lantern", "Apple"];
-enemy_atk =   [ 1,      1,       1,      1,           1,        4,           2,          2,         2,        2 ];
-enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5,          12,        4,        6 ];
+enemy_names = ["Chili", "Melon", "Corn", "Mushroom1", "Banana", "Mushroom2", "Broccoli", "Coconut", "Carrot", "Apple"];
+enemy_atk =   [ 1,      1,       1,      1,           1,        4,           2,          2,         2,        0 ];
+enemy_hp =    [ 3,      6,       1,      4,           5,        6,           5,          12,        4,        8 ];
 enemy_spd =   [ 1,      1,       1,      1,           1,        1,           1,          2,         5,        1 ];
-enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Bouncy",   "Burst",   "Burst",  "Basic"];
-enemy_walk =  [ spr_chili_walk,   spr_melon_walk,   spr_corn_walk,   spr_mushroom1_walk,   spr_banana_walk,   spr_mushroom2_walk,   spr_broccoli_walk,    ];
-enemy_attack =[ spr_chili_attack, spr_melon_attack, spr_corn_attack, spr_mushroom1_attack, spr_banana_attack, spr_mushroom2_attack, spr_broccoli_attack,  ];
+enemy_moves = ["Basic", "Basic", "Basic","Still",     "Basic",  "Still",     "Basic",    "Basic",   "Basic",  "Basic"];
 
-levels = [ room_cave_layout_1, room_cave_layout_2, room_cave_layout_3, room_cave_layout_4, room_cave_layout_5, room_cave_layout_6, room_cave_layout_7, room_cave_layout_8 ];
+enemy_walk =  [ spr_chili_walk,   spr_melon_walk,   spr_corn_walk,   spr_mushroom1_walk,   spr_banana_walk,   spr_mushroom2_walk,   spr_broccoli_walk,   spr_coconut_walk,   spr_carrot_walk   ];
+enemy_attack =[ spr_chili_attack, spr_melon_attack, spr_corn_attack, spr_mushroom1_attack, spr_banana_attack, spr_mushroom2_attack, spr_broccoli_attack, spr_coconut_attack, spr_carrot_attack ];
+
+levels = [ room_cave_layout_1, room_cave_layout_2, room_cave_layout_3, room_cave_layout_4, room_cave_layout_5, room_cave_layout_6, room_cave_layout_7 ];
 
 level_seed = array_create(50);
 
 // Generates which level layout to use for each layer (1-50)
 for (var i = 0; i < array_length(level_seed); i++) {
-	level_seed[i] = levels[irandom_range(0, array_length(levels) - 1)];
+	level_seed[i] = levels[irandom_range(0, 6)];
 }
 
 spawn_enemy = function(enemyId, xPos, yPos) {
@@ -55,4 +50,3 @@ generate_enemy = function(xApprox, yApprox) {
 		spawn_enemy(irandom_range(0, 11), xApprox + random_range(-60, 60), yApprox + random_range(-60, 60));
 	}
 }
->>>>>>> origin/Functional

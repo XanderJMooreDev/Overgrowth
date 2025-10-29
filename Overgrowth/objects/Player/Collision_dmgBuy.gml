@@ -1,4 +1,4 @@
-if(coinNum >= 250){
-	playerDamage += 5;
-	coinNum -= 250;
+if(obj_ultimate_manager.coinNum >= 250){
+	obj_ultimate_manager.playerDamage += 5;
+	obj_ultimate_manager.coinNum -= 250;
 }

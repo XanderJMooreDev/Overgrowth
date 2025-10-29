@@ -20,8 +20,6 @@ if item2Cooldown == 0 && keyItem2 && (items[1] == "Coconut" || items[1] == "Carr
 joystickX = (keyRight - keyLeft) * playerSpeed;
 joystickY = (keyDown - keyUp) * playerSpeed;
 
-<<<<<<< HEAD
-=======
 if joystickX != 0 {
 	facingDirX = joystickX / playerSpeed;
 	totalFacingDir = 0;
@@ -93,7 +91,9 @@ if item1Timer > 0 && items[0] == "Carrot" || item2Timer > 0 && items[1] == "Carr
 	joystickY *= 1.5;
 }
 
->>>>>>> origin/Functional
+joystickX *= obj_ultimate_manager.playerSpeed;
+joystickY *= obj_ultimate_manager.playerSpeed;
+
 if attempt_move(x + joystickX, y) {
 	x += joystickX;
 }
@@ -107,9 +107,25 @@ update_cooldowns();
 if meleeCooldown <= 0 && keyStab {
 	meleeCooldown = 3;
 	state = "Melee Stab";
-<<<<<<< HEAD
-	instance_create_layer(x, y, "Instances", obj_stab_hitbox);
-=======
 	instance_create_layer(x + (facingDirX * 55), y, "Instances", obj_stab_hitbox);
->>>>>>> origin/Functional
+}
+
+if hp <= 0 {
+	room_goto(Home);
+}
+
+if meleeCooldown > 2 {
+	sprite_index = spr_player_stab;
+}
+else if item1Cooldown > 1 && items[0] == "Banana" || item2Cooldown > 1 && items[1] == "Banana" {
+	sprite_index = spr_player_banana_shoot;
+}
+else if item1Cooldown > 0 && items[0] == "Melon" || item1Cooldown > 0 && items[0] == "Melon" {
+	sprite_index = spr_player_melon_shoot;
+}
+else if joystickX != 0 || joystickY != 0 {
+	sprite_index = spr_player_walk;
+}
+else {
+	sprite_index = spr_player_stand;
 }

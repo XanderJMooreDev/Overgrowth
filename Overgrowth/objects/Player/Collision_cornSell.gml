@@ -1,4 +1,6 @@
-if(cornNum >0){
-	coinNum += cornNum * 100;
+if(obj_ultimate_manager.cornNum >0){
+	obj_ultimate_manager.coinNum += obj_ultimate_manager.cornNum * 100;
+	obj_ultimate_manager.cornNum =0;
 }
-cornNum =0;
+
+show_debug_message("Corn");

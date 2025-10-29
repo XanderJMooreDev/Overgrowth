@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 var corn = corn_seeds;
 var chili = chili_seeds;
 var broc = brocolli_seeds;
@@ -10,4 +8,3 @@ var chili_num = 0;
 var broc_num = 0;
 var ban_num = 0;
 var corn_num = 0;
->>>>>>> origin/Functional

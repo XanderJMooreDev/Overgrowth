@@ -7,17 +7,13 @@ if !(type == "Banana" && shootCooldown > 3) && moveType == "Basic" {
 }
 
 if place_meeting(x, y, obj_stab_hitbox) && obj_player_combat.state == "Melee Stab" && iFrames <= 0 {
-<<<<<<< HEAD
-	hp--;
-=======
 	if obj_player_combat.item1Timer > 0 && obj_player_combat.items[0] == "Mushroom2" || obj_player_combat.item2Timer > 0 && obj_player_combat.items[1] == "Mushroom2" {
-		hp -= obj_player_combat.meleeAtk * 1.25;
+		hp -= obj_ultimate_manager.playerDamage * 1.25;
 	}
 	else {
-		hp -= obj_player_combat.meleeAtk;
+		hp -= obj_ultimate_manager.playerDamage;
 	}
 	
->>>>>>> origin/Functional
 	iFrames = 2;
 	
 	obj_player_combat.manna += 5;

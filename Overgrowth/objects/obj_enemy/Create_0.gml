@@ -6,11 +6,6 @@ velocityY = 0;
 
 hp = 5;
 moveSpeed = 2;
-<<<<<<< HEAD
-attackDmg = 0;
-effectApplied = "None";
-effectTime = 0;
-=======
 meleeAtk = 0;
 moveType = "Basic";
 type = "None";
@@ -23,7 +18,6 @@ hitAnimCooldown = 0;
 // Applies to the effect they've been inflicted with
 effectedType = "None";
 effectTimer = 0;
->>>>>>> origin/Functional
 
 iFrames = 0;
 
@@ -139,5 +133,48 @@ basic_move = function() {
 
 	if attempt_move(x, y + joystickY) {
 		y += joystickY;
+	}
+}
+
+// This is super clunky but it works
+unlock_if_can = function() {
+	if type == "Chili" && !obj_ultimate_manager.chiliUnlocked {
+		obj_ultimate_manager.chiliUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Melon" && !obj_ultimate_manager.melonUnlocked {
+		obj_ultimate_manager.melonUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Mushroom1" && !obj_ultimate_manager.mushroom1Unlocked {
+		obj_ultimate_manager.mushroom1Unlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Banana" && !obj_ultimate_manager.bananaUnlocked {
+		obj_ultimate_manager.bananaUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Mushroom2" && !obj_ultimate_manager.mushroom2Unlocked {
+		obj_ultimate_manager.mushroom2Unlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Broccoli" && !obj_ultimate_manager.broccoliUnlocked {
+		obj_ultimate_manager.broccoliUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Coconut" && !obj_ultimate_manager.coconutUnlocked {
+		obj_ultimate_manager.coconutUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
+	}
+	
+	if type == "Carrot" && !obj_ultimate_manager.carrotUnlocked {
+		obj_ultimate_manager.carrotUnlocked = true;
+		effect_create_layer("Instances", ef_star, x, y, 10, c_yellow);
 	}
 }

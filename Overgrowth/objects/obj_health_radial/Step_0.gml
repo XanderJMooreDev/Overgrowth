@@ -1,0 +1,1 @@
+image_index = obj_player_combat.hp / obj_player_combat.maxHp * 12;

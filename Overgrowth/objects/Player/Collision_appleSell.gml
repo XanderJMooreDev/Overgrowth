@@ -1,4 +1,4 @@
-if(appleNum > 0){
-	coinNum += appleNum * 10;
+if(obj_ultimate_manager.appleNum > 0){
+	obj_ultimate_manager.coinNum += obj_ultimate_manager.appleNum * 10;
+	obj_ultimate_manager.appleNum = 0;
 }
-appleNum = 0;
