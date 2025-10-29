@@ -45,7 +45,20 @@ if place_meeting(x, y, obj_stab_hitbox) && obj_player_combat.state == "Melee Sta
 if hp <= 0 {
 	effect_create_layer("Instances", ef_smoke, x, y, 10, c_green);
 	obj_enemy_manager.enemiesInRoom--;
-	instance_destroy();
+	
+	switch (irandom_range(0, 3)) {
+		case 0:
+			instance_change(appleSeeds, true);
+			break;
+		case 1:
+			instance_change(brocSeeds, true);
+			break;
+		case 2:
+			instance_change(cornSeeds, true);
+			break;
+		default:
+			instance_change(bananaSeeds, true);
+	}
 }
 
 if type == "Banana" && shootCooldown > 3 {
